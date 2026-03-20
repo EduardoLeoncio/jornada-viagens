@@ -56,6 +56,10 @@ nav {
 
 @media screen and (min-width: 768px) {
 
+  input[type="checkbox"]:checked ~ nav {
+    position: relative;
+  }
+
   .navigation {
     margin-top: 0;
     display:flex;
