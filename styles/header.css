@@ -5,20 +5,112 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 38px 48px;
+  position: relative;
 }
 
 .logo {
   display: inline-block;
   width: 68px;
   height: 64px;
+  cursor: pointer;
+}
+
+.logo-mobile {
+  display: block;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+.navigation {
+  margin-top: 22px;
 }
 
 .menu-hamburguer {
   width: 32px;
   height: 22px;
-  margin-top: 22px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ nav {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-tertiary-color);
 }
 
 nav {
   display: none;
+}
+
+.list-links {
+  list-style: none;
+}
+
+.list-links li {
+  margin: 16px 0;
+}
+
+.list-links li a {
+  text-decoration: none;
+  color: var(--text-secondary-color);
+  font-weight: var(--menu-text-weight);
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 38px 60px;
+  }
+
+
+  input[type="checkbox"]:checked ~ nav {
+    position: relative;
+  }
+
+  .navigation {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navigation label {
+    display: none;
+  }
+
+  .navigation nav {
+    display: block;
+  }
+
+  .list-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    gap: 50px;
+  }
+
+  .list-links li {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    header {
+      padding: 38px 120px;
+    }
+
+    .logo-mobile {
+      display: none;
+    }
+
+    .logo-desktop {
+      display: block;
+      width: 268px;
+      height: 64px;
+    }
+  }
 }
