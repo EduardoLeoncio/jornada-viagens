@@ -112,5 +112,9 @@ nav {
       width: 268px;
       height: 64px;
     }
+
+    .list-links li a:hover {
+      color: var(--primary-color);
+    }
   }
 }
